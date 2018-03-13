@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <DataShapes>
+        <DataShape baseDataShape="" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-10-30T11:21:21.542+05:30" name="Energy_MeterDS" projectName="" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <FieldDefinitions>
+                <FieldDefinition aspect.isPrimaryKey="false" baseType="STRING" description="" name="ConnectionID" ordinal="1"/>
+                <FieldDefinition baseType="STRING" description="" name="Customer_Name" ordinal="2"/>
+                <FieldDefinition baseType="STRING" description="" name="Device_Model" ordinal="6"/>
+                <FieldDefinition baseType="NUMBER" description="" name="Electronic_Device_SN" ordinal="11"/>
+                <FieldDefinition baseType="STRING" description="" name="Electronic_Device_Type" ordinal="10"/>
+                <FieldDefinition baseType="STRING" description="" name="Manufacturer" ordinal="5"/>
+                <FieldDefinition baseType="DATETIME" description="" name="Meter_Installation_Date" ordinal="8"/>
+                <FieldDefinition baseType="STRING" description="" name="Meter_size_DN" ordinal="7"/>
+                <FieldDefinition baseType="STRING" description="" name="Meter_SN" ordinal="3"/>
+                <FieldDefinition baseType="DATETIME" description="" name="Meter_Validity_Date" ordinal="9"/>
+                <FieldDefinition baseType="STRING" description="" name="Seal_SN" ordinal="4"/>
+                <FieldDefinition aspect.isPrimaryKey="true" baseType="DATETIME" description="" name="Timestamp" ordinal="12"/>
+            </FieldDefinitions>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;fields : ConnectionID : Added, Customer_Name : Added, Meter_SN : Added, Seal_SN : Added, Manufacturer : Added, Device_Model : Added, Meter_size_DN : Added, Meter_Installation_Date : Added, Meter_Validity_Date : Added, Electronic_Device_Type : Added, Electronic_Device_SN : Added, Timestamp : Added&#10;" timestamp="2017-10-27T14:38:36.170+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ConnectionID : Updated&#10;" timestamp="2017-10-27T16:39:34.301+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : jsonData : Added&#10;" timestamp="2017-10-28T22:27:11.112+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-28T22:27:12.943+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : jsonData : removed&#10;" timestamp="2017-10-28T22:59:23.342+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-29T10:40:34.144+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T09:58:43.336+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T09:58:43.963+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="fields : ConnectionID : Updated, Timestamp : Updated&#10;" timestamp="2017-10-30T10:53:13.746+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T10:54:49.467+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T11:20:07.802+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T11:21:21.542+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </DataShape>
+    </DataShapes>
+</Entities>
