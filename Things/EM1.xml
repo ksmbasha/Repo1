@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-10-30T09:49:43.809+05:30" name="EM1" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="EnergyMeters" valueStream="Process Value Stream">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ThingShape>
+                <PropertyDefinitions/>
+                <ServiceDefinitions/>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations/>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations/>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <Customer_Name>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Customer_Name>
+                <Electronic_Device_SN>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Electronic_Device_SN>
+                <Powerfactor>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Powerfactor>
+                <Meter_Validity_Date>
+                    <Value>2018-03-13T19:44:44.323+05:30</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Meter_Validity_Date>
+                <Electronic_Device_Type>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Electronic_Device_Type>
+                <pic>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </pic>
+                <KW>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </KW>
+                <Device_Model>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Device_Model>
+                <Timestamp>
+                    <Value>2018-03-13T19:44:44.323+05:30</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Timestamp>
+                <voltage>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </voltage>
+                <Meter_size_DN>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Meter_size_DN>
+                <ConnectionID>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </ConnectionID>
+                <current>
+                    <Value>0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </current>
+                <Meter_Installation_Date>
+                    <Value>2018-03-13T19:44:44.323+05:30</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Meter_Installation_Date>
+                <Seal_SN>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Seal_SN>
+                <Meter_SN>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Meter_SN>
+                <Manufacturer>
+                    <Value/>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </Manufacturer>
+                <location>
+                    <Value>0.0,0.0,0.0</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </location>
+                <timestamp>
+                    <Value>2018-03-13T19:44:44.323+05:30</Value>
+                    <Timestamp>1970-01-01T05:30:00.000+05:30</Timestamp>
+                    <Quality>UNKNOWN</Quality>
+                </timestamp>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated, thingTemplate : updated&#10;" timestamp="2017-10-27T14:40:46.344+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-27T15:07:03.708+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-27T15:07:05.036+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-27T15:07:06.354+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="header : valueStream : updated&#10;" timestamp="2017-10-29T11:06:21.486+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T09:49:42.572+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T09:49:43.601+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-10-30T09:49:43.809+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
