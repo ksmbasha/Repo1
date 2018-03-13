@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <ModelTags>
+        <ModelTagVocabulary description="" documentationContent="" homeMashup="" isDynamic="false" lastModifiedDate="2017-04-20T19:51:08.988+05:30" name="EquipmentTypes" projectName="" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <VocabularyTerm description="" name="Vending Machine"/>
+            <VocabularyTerm description="" name="Vending Machine Communication Server"/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, documentationContent : updated, tags : updated&#10;" timestamp="2017-02-07T22:28:55.421+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-20T19:51:08.948+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </ModelTagVocabulary>
+    </ModelTags>
+</Entities>
