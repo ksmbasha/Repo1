@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="clob118: 'true'" aspect.mashupType="clob119: 'mashup'" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-12-01T16:10:45.348+05:30" name="Vendingvaluestreammash" projectName="" rows="0.0" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>VM-TR1</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ ],
+          "Properties" : {
+            "RowSelectedStyle" : "DefaultRowSelectedStyle",
+            "IsEditable" : false,
+            "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+            "Left" : 210,
+            "ShowDataLoading" : true,
+            "GridHeaderStyle" : "DefaultGridHeaderStyle",
+            "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+            "FocusStyle" : "DefaultFocusStyle",
+            "TabSequence" : 0,
+            "RowFormat_StateParameters" : [ ],
+            "CellTextWrapping" : false,
+            "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+            "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+            "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+            "Visible" : true,
+            "DisplayName" : "dhxgrid-3",
+            "Height" : 200,
+            "Width" : 400,
+            "MultiSelect" : false,
+            "CurrentScrollTop" : 0,
+            "ResponsiveLayout" : true,
+            "ShowAllColumns" : false,
+            "Z-index" : 10,
+            "AlignHeader" : false,
+            "__TypeDisplayName" : "Grid",
+            "ScrollTop" : 0,
+            "RowHeight" : 30,
+            "ColumnFormat" : {
+              "formatInfo" : [ {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "CurrentHumidity",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "CurrentHumidity",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "left",
+                "AllowEdit" : false,
+                "Title" : "timestamp",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "DATETIME",
+                  "FormatString" : "[[dateTimeFormat_Default]]"
+                },
+                "FieldName" : "timestamp",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "right",
+                "AllowEdit" : false,
+                "Title" : "CurrentTemperature",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "NUMBER",
+                  "FormatString" : "0.00"
+                },
+                "FieldName" : "CurrentTemperature",
+                "Width" : "auto"
+              } ]
+            },
+            "Area" : "UI",
+            "Type" : "dhxgrid",
+            "Top" : 50,
+            "IsPrintLayout" : false,
+            "Id" : "dhxgrid-3",
+            "RowHoverStyle" : "DefaultRowHoverStyle",
+            "AutoSelectFirstRow" : false,
+            "GridHeaderTextCase" : "capitalize"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Column 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 160,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 0,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 50,
+        "FooterHeight" : 0,
+        "PctRow1" : 50,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "LeftSidebar" : false,
+        "RightSidebar" : false,
+        "PctColumn5" : 1,
+        "Visible" : true,
+        "DisplayName" : "layout-1",
+        "PctColumn6" : 1,
+        "PctColumn3" : 1,
+        "PrintWidth" : 650,
+        "PctColumn4" : 1,
+        "PctColumn1" : 100,
+        "PctColumn2" : 0,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 0,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "PctColumn8" : 1,
+        "ResponsiveLayout" : true,
+        "Columns" : 1,
+        "Z-index" : 10,
+        "Spacing" : 2,
+        "Orientation" : "horizontal",
+        "__TypeDisplayName" : "Layout",
+        "Area" : "UI",
+        "Type" : "layout",
+        "LeftSidebarWidth" : 0,
+        "Header" : false,
+        "Top" : 75,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 3,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "QueryPropertyHistory",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_VM-TR1",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "20ee381b-658c-460c-b654-997a4d7bd34b",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "QueryPropertyHistory",
+    "Id" : "3cc56753-bf21-4e50-8c85-cba49fc1bc61",
+    "SourceSection" : "Things_VM-TR1",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxgrid-3"
+  } ],
+  "Data" : {
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    },
+    "Things_VM-TR1" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "QueryPropertyHistory",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "54eb165c-6968-4dd4-ac07-f08fe08fccfc",
+        "Name" : "QueryPropertyHistory"
+      } ],
+      "EntityName" : "VM-TR1",
+      "Id" : "e79e2110-7f93-4d9c-868d-bdc9e05f9069",
+      "DataName" : "Things_VM-TR1"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2017-04-26T15:34:35.972+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-11-18T00:03:05.846+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-01T16:10:45.348+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
