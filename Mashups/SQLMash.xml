@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Mashups>
+        <Mashup aspect.isResponsive="clob76: 'true'" aspect.mashupType="clob77: 'mashup'" columns="0.0" description="" documentationContent="" homeMashup="" lastModifiedDate="2017-08-18T10:20:57.502+05:30" name="SQLMash" projectName="" rows="0.0" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ParameterDefinitions/>
+            <Things>
+                <Thing>ACMESQLDatabase</Thing>
+            </Things>
+            <ThingShapes/>
+            <ThingTemplates/>
+            <mashupContent><![CDATA[{
+  "RunTimePermissions" : { },
+  "UI" : {
+    "Widgets" : [ {
+      "Widgets" : [ {
+        "Widgets" : [ {
+          "Widgets" : [ {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 150,
+              "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+              "ShowDataLoading" : true,
+              "Label" : "Enter Title",
+              "PlaceholderText" : "",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "TextAlign" : "left",
+              "Visible" : true,
+              "DisplayName" : "textbox-9",
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 200,
+              "ReadOnly" : false,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "Text" : "",
+              "__TypeDisplayName" : "TextBox",
+              "Area" : "UI",
+              "Type" : "textbox",
+              "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+              "MaskInputCharacters" : false,
+              "Top" : 15,
+              "CursorPosition" : 0,
+              "Id" : "textbox-9"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 540,
+              "IntervalType" : "h",
+              "ShowDataLoading" : true,
+              "Label" : "",
+              "InitializeWithCurrentDateTime" : true,
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "DateFormatToken" : "",
+              "Visible" : true,
+              "DisplayName" : "datetimepicker-10",
+              "Style" : "DefaultTimePickerStyle",
+              "Height" : 28,
+              "DateOrder" : "yy-mm-dd",
+              "Width" : 200,
+              "DateDisplay" : "short",
+              "TimeFormat" : "hh:mm:ss",
+              "DateDelimiter" : "-",
+              "__supportsLabel" : true,
+              "ResponsiveLayout" : false,
+              "DateOnly" : false,
+              "Z-index" : 10,
+              "__TypeDisplayName" : "Date Time Picker",
+              "Area" : "UI",
+              "Type" : "datetimepicker",
+              "Top" : 55,
+              "DateFormat" : "yy-M-dd",
+              "Id" : "datetimepicker-10",
+              "DisplaySeconds" : true,
+              "Interval" : 0
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 245,
+              "CancelConfirmationButton" : "button2",
+              "ShowDataLoading" : true,
+              "Label" : "Insert",
+              "FocusStyle" : "DefaultButtonFocusStyle",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "IconAlignment" : "left",
+              "Visible" : true,
+              "DisplayName" : "button-11",
+              "Style" : "DefaultButtonStyle",
+              "Height" : 30,
+              "DisabledStyle" : "DefaultButtonDisabledStyle",
+              "ConfirmationTitle" : "Confirm Action",
+              "Disabled" : false,
+              "Width" : 75,
+              "ResponsiveLayout" : false,
+              "ConfirmationPrompt" : "Do Action?",
+              "Z-index" : 10,
+              "ConfirmationButton1Label" : "Yes",
+              "RoundedCorners" : true,
+              "__TypeDisplayName" : "Button",
+              "HoverStyle" : "DefaultButtonHoverStyle",
+              "Area" : "UI",
+              "Type" : "button",
+              "Top" : 65,
+              "DefaultConfirmationButton" : "button1",
+              "ContextId" : "",
+              "ConfirmationRequired" : false,
+              "Id" : "button-11",
+              "ConfirmationButton2Label" : "No",
+              "ActiveStyle" : "DefaultButtonActiveStyle"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 380,
+              "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+              "ShowDataLoading" : true,
+              "Label" : "Enter URL",
+              "PlaceholderText" : "",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "TextAlign" : "left",
+              "Visible" : true,
+              "DisplayName" : "textbox-12",
+              "Style" : "DefaultTextBoxStyle",
+              "Height" : 24,
+              "Width" : 200,
+              "ReadOnly" : false,
+              "__supportsLabel" : true,
+              "InnerShadow" : true,
+              "ResponsiveLayout" : false,
+              "LabelAlignment" : "left",
+              "Z-index" : 10,
+              "Text" : "",
+              "__TypeDisplayName" : "TextBox",
+              "Area" : "UI",
+              "Type" : "textbox",
+              "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+              "MaskInputCharacters" : false,
+              "Top" : 15,
+              "CursorPosition" : 0,
+              "Id" : "textbox-12"
+            }
+          }, {
+            "Widgets" : [ ],
+            "Properties" : {
+              "Left" : 370.1111145019531,
+              "CancelConfirmationButton" : "button2",
+              "ShowDataLoading" : true,
+              "Label" : "Delete",
+              "FocusStyle" : "DefaultButtonFocusStyle",
+              "TabSequence" : 0,
+              "ToolTipField" : "",
+              "IconAlignment" : "left",
+              "Visible" : true,
+              "DisplayName" : "button-13",
+              "Style" : "DefaultButtonStyle",
+              "Height" : 30,
+              "DisabledStyle" : "DefaultButtonDisabledStyle",
+              "ConfirmationTitle" : "Confirm Action",
+              "Disabled" : false,
+              "Width" : 75,
+              "ResponsiveLayout" : false,
+              "ConfirmationPrompt" : "Do Action?",
+              "Z-index" : 10,
+              "ConfirmationButton1Label" : "Yes",
+              "RoundedCorners" : true,
+              "__TypeDisplayName" : "Button",
+              "HoverStyle" : "DefaultButtonHoverStyle",
+              "Area" : "UI",
+              "Type" : "button",
+              "Top" : 60.111114501953125,
+              "DefaultConfirmationButton" : "button1",
+              "ContextId" : "",
+              "ConfirmationRequired" : false,
+              "Id" : "button-13",
+              "ConfirmationButton2Label" : "No",
+              "ActiveStyle" : "DefaultButtonActiveStyle"
+            }
+          } ],
+          "Properties" : {
+            "Left" : 235,
+            "HideScrollbars" : false,
+            "ResponsiveLayout" : true,
+            "ShowDataLoading" : true,
+            "Z-index" : 10,
+            "VerticalAnchor" : "top",
+            "__TypeDisplayName" : "Panel",
+            "HorizontalAnchor" : "left",
+            "Area" : "UI",
+            "Type" : "panel",
+            "Top" : 25,
+            "Visible" : true,
+            "DisplayName" : "panel-6",
+            "Style" : "DefaultPanelStyle",
+            "Height" : 200,
+            "Id" : "panel-6",
+            "Width" : 300
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Header",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-2"
+        }
+      }, {
+        "Widgets" : [ {
+          "Widgets" : [ ],
+          "Properties" : {
+            "RowSelectedStyle" : "DefaultRowSelectedStyle",
+            "IsEditable" : false,
+            "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+            "Left" : 0,
+            "ShowDataLoading" : true,
+            "GridHeaderStyle" : "DefaultGridHeaderStyle",
+            "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+            "FocusStyle" : "DefaultFocusStyle",
+            "TabSequence" : 0,
+            "RowFormat_StateParameters" : [ ],
+            "CellTextWrapping" : false,
+            "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+            "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+            "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+            "Visible" : true,
+            "DisplayName" : "dhxgrid-5",
+            "Height" : 200,
+            "Width" : 400,
+            "MultiSelect" : false,
+            "CurrentScrollTop" : 0,
+            "ResponsiveLayout" : true,
+            "ShowAllColumns" : false,
+            "Z-index" : 10,
+            "AlignHeader" : false,
+            "__TypeDisplayName" : "Grid",
+            "ScrollTop" : 0,
+            "RowHeight" : 30,
+            "ColumnFormat" : {
+              "formatInfo" : [ {
+                "ValidationMessage" : "",
+                "Align" : "left",
+                "AllowEdit" : false,
+                "Title" : "title",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "STRING",
+                  "FormatString" : "full"
+                },
+                "FieldName" : "title",
+                "Width" : "auto"
+              }, {
+                "ValidationMessage" : "",
+                "Align" : "left",
+                "AllowEdit" : false,
+                "Title" : "link",
+                "ValidationExpression" : "",
+                "FormatOptions" : {
+                  "renderer" : "STRING",
+                  "FormatString" : "full"
+                },
+                "FieldName" : "link",
+                "Width" : "auto"
+              } ]
+            },
+            "Area" : "UI",
+            "Type" : "dhxgrid",
+            "Top" : 0,
+            "IsPrintLayout" : false,
+            "Id" : "dhxgrid-5",
+            "RowHoverStyle" : "DefaultRowHoverStyle",
+            "AutoSelectFirstRow" : false,
+            "GridHeaderTextCase" : "capitalize"
+          }
+        } ],
+        "Properties" : {
+          "MinHeight" : 0,
+          "TabWidth" : 36,
+          "BGImageRepeat" : "no-repeat",
+          "ShowDataLoading" : true,
+          "ShowExpandCollapseTab" : false,
+          "ExpandCollapseTabLocation" : "outside",
+          "TabExpandStyle" : "DefaultTabExpandStyle",
+          "Visible" : true,
+          "DisplayName" : "Row 1",
+          "Style" : "DefaultContainerStyle",
+          "BGImageSize" : "auto",
+          "Overlay" : false,
+          "Expanded" : true,
+          "TabCollapseStyle" : "DefaultTabCollapseStyle",
+          "OverlayIsTransparent" : false,
+          "ResponsiveLayout" : true,
+          "Z-index" : 10,
+          "TabOffset" : 0,
+          "MinWidth" : 0,
+          "__TypeDisplayName" : "Container",
+          "TabLocation" : "center",
+          "Area" : "UI",
+          "Type" : "container",
+          "AnimateExpandCollapse" : true,
+          "TabHeight" : 36,
+          "Id" : "container-3"
+        }
+      } ],
+      "Properties" : {
+        "Left" : 165,
+        "IncludeSpacingInFixedAreas" : false,
+        "ShowDataLoading" : true,
+        "HeaderHeight" : 100,
+        "PctRow4" : 0,
+        "PctRow3" : 0,
+        "PctRow2" : 0,
+        "FooterHeight" : 0,
+        "PctRow1" : 100,
+        "PctRow8" : 0,
+        "PctRow7" : 0,
+        "PctRow6" : 0,
+        "PctRow5" : 0,
+        "LeftSidebar" : false,
+        "RightSidebar" : false,
+        "PctColumn5" : 1,
+        "Visible" : true,
+        "DisplayName" : "layout-1",
+        "PctColumn6" : 1,
+        "PctColumn3" : 1,
+        "PrintWidth" : 650,
+        "PctColumn4" : 1,
+        "PctColumn1" : 50,
+        "PctColumn2" : 50,
+        "PrintMarginTopBottom" : 0.5,
+        "Rows" : 1,
+        "RightSidebarWidth" : 0,
+        "PrintMarginLeftRight" : 0.5,
+        "PctColumn7" : 1,
+        "PctColumn8" : 1,
+        "ResponsiveLayout" : true,
+        "Columns" : 0,
+        "Z-index" : 10,
+        "Spacing" : 2,
+        "Orientation" : "vertical",
+        "__TypeDisplayName" : "Layout",
+        "Area" : "UI",
+        "Type" : "layout",
+        "LeftSidebarWidth" : 0,
+        "Header" : true,
+        "Top" : 10,
+        "IsPrintLayout" : false,
+        "Footer" : false,
+        "Id" : "layout-1"
+      }
+    } ],
+    "Properties" : {
+      "MinHeight" : 0,
+      "Left" : 0,
+      "BGImageRepeat" : "no-repeat",
+      "ShowDataLoading" : true,
+      "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+      "id_index" : 14,
+      "supportsAutoResize" : true,
+      "Visible" : true,
+      "DisplayName" : "Mashup",
+      "Style" : "DefaultMashupStyle",
+      "BGImageSize" : "auto",
+      "Height" : 618,
+      "Width" : 1024,
+      "TitleBar" : false,
+      "Rows" : 0,
+      "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+      "TitleBarStyle" : "DefaultTitleBarStyle",
+      "ResponsiveLayout" : true,
+      "Title" : "",
+      "Columns" : 0,
+      "Z-index" : 10,
+      "TitleBarText" : "Gadget Title Here",
+      "MinWidth" : 0,
+      "__TypeDisplayName" : "Mashup",
+      "EnableParameterEditing" : false,
+      "Area" : "Mashup",
+      "Type" : "mashup",
+      "Top" : 0,
+      "IsPrintLayout" : false,
+      "MashupToEditGadget" : "DefaultMashupToEditGadget",
+      "Id" : "mashup-root",
+      "IgnoreWarningsInViewMashup" : false
+    }
+  },
+  "Events" : [ {
+    "EventTriggerArea" : "Mashup",
+    "EventHandlerService" : "GetAllRecords",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_ACMESQLDatabase",
+    "EventTriggerEvent" : "Loaded",
+    "Id" : "f263e236-7f66-44ef-8124-c4006c831d09",
+    "EventTriggerId" : "mashup-root",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "InsertRecord",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_ACMESQLDatabase",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "f5fecca2-fd1e-4c62-bdfa-196c061fa60f",
+    "EventTriggerId" : "button-11",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetAllRecords",
+    "EventTriggerSection" : "Things_ACMESQLDatabase",
+    "EventHandlerId" : "Things_ACMESQLDatabase",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "6c325047-cc8b-4756-9901-07c0c4d5bbd6",
+    "EventTriggerId" : "InsertRecord",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "UI",
+    "EventHandlerService" : "DeleteARecord",
+    "EventTriggerSection" : "",
+    "EventHandlerId" : "Things_ACMESQLDatabase",
+    "EventTriggerEvent" : "Clicked",
+    "Id" : "c53c92c2-028a-43ac-9049-1c0d7fda4393",
+    "EventTriggerId" : "button-13",
+    "EventHandlerArea" : "Data"
+  }, {
+    "EventTriggerArea" : "Data",
+    "EventHandlerService" : "GetAllRecords",
+    "EventTriggerSection" : "Things_ACMESQLDatabase",
+    "EventHandlerId" : "Things_ACMESQLDatabase",
+    "EventTriggerEvent" : "ServiceInvokeCompleted",
+    "Id" : "363287e3-51cb-42c0-bbf8-4d9b1d4bf2da",
+    "EventTriggerId" : "DeleteARecord",
+    "EventHandlerArea" : "Data"
+  } ],
+  "mashupType" : "mashup",
+  "DataBindings" : [ {
+    "SourceArea" : "Data",
+    "TargetArea" : "UI",
+    "TargetSection" : "",
+    "SourceId" : "GetAllRecords",
+    "Id" : "075aab78-33d1-462e-838a-fe77e5c01141",
+    "SourceSection" : "Things_ACMESQLDatabase",
+    "SourceDetails" : "AllData",
+    "PropertyMaps" : [ {
+      "SourcePropertyType" : "InfoTable",
+      "TargetProperty" : "Data",
+      "TargetPropertyType" : "property",
+      "SourcePropertyBaseType" : "INFOTABLE",
+      "TargetPropertyBaseType" : "INFOTABLE",
+      "SourceProperty" : ""
+    } ],
+    "TargetId" : "dhxgrid-5"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_ACMESQLDatabase",
+    "SourceId" : "textbox-9",
+    "Id" : "12d12b96-16ca-4423-838d-6a7021dd5918",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "StringField",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "InsertRecord"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_ACMESQLDatabase",
+    "SourceId" : "textbox-12",
+    "Id" : "32cb7069-9ad5-4cb7-b23c-b2ebcb14af8f",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "Link",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "InsertRecord"
+  }, {
+    "SourceArea" : "UI",
+    "TargetArea" : "Data",
+    "TargetSection" : "Things_ACMESQLDatabase",
+    "SourceId" : "textbox-9",
+    "Id" : "29157cad-90b6-41cc-afe8-8bb63bcf4d7b",
+    "SourceSection" : "",
+    "PropertyMaps" : [ {
+      "TargetProperty" : "StringField",
+      "TargetPropertyType" : "Parameter",
+      "SourcePropertyBaseType" : "STRING",
+      "TargetPropertyBaseType" : "STRING",
+      "SourceProperty" : "Text"
+    } ],
+    "TargetId" : "DeleteARecord"
+  } ],
+  "Data" : {
+    "Things_ACMESQLDatabase" : {
+      "EntityType" : "Things",
+      "Services" : [ {
+        "Target" : "GetAllRecords",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "26d91796-bcc3-454c-8ab8-92a5972c3a93",
+        "Name" : "GetAllRecords"
+      }, {
+        "Target" : "InsertRecord",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "2a6ff0f9-5fae-47a5-adf3-dc41b0ac52c2",
+        "Name" : "InsertRecord"
+      }, {
+        "Target" : "DeleteARecord",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "c44f646d-c5ef-4c7e-84a3-4e5041f707dc",
+        "Name" : "DeleteARecord"
+      } ],
+      "EntityName" : "ACMESQLDatabase",
+      "Id" : "f192adb5-d0f2-4931-9694-94964074af16",
+      "DataName" : "Things_ACMESQLDatabase"
+    },
+    "UserExtensions" : {
+      "EntityType" : "UserExtensions",
+      "Services" : [ {
+        "Target" : "GetCurrentUserExtensionProperties",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "UserExtensionInterface",
+        "Name" : "GetCurrentUserExtensionProperties"
+      } ],
+      "EntityName" : "",
+      "Id" : "UserExtensions",
+      "DataName" : "UserExtensions"
+    },
+    "Session" : {
+      "EntityType" : "Session",
+      "Services" : [ {
+        "Target" : "GetGlobalSessionValues",
+        "Parameters" : { },
+        "APIMethod" : "post",
+        "Characteristic" : "Services",
+        "RefreshInterval" : 0,
+        "Id" : "SessionInterface",
+        "Name" : "GetGlobalSessionValues"
+      } ],
+      "EntityName" : "",
+      "Id" : "session",
+      "DataName" : "Session"
+    }
+  },
+  "DesignTimePermissions" : { }
+}]]></mashupContent>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;documentation : updated&#10;" timestamp="2017-03-12T16:43:33.311+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:05:46.247+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:05:48.330+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:08:15.529+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:08:17.922+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:10:22.241+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:17:32.569+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:40:06.595+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-03-12T20:49:13.802+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-23T19:31:17.530+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-23T19:33:17.581+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-23T19:39:08.798+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-04-23T19:39:11.210+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-05-27T12:52:30.258+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:18:05.739+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:18:33.371+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:19:00.525+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:19:35.696+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:19:36.415+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:20:56.864+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-08-18T10:20:57.502+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Mashup>
+    </Mashups>
+</Entities>
