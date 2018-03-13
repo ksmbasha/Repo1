@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Things>
+        <Thing description="Connection to ACME database" documentationContent="" effectiveThingPackage="DatabaseThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2018-01-19T12:51:34.885+05:30" name="ACMESQLDatabase1" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="MySqlServer" valueStream="Process Value Stream">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables>
+                <ConfigurationTable description="Field/Column Name Aliases" isMultiRow="true" name="ColumnAliases" ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.friendlyName="Database Column Name" baseType="STRING" description="Database column name" name="columnName" ordinal="0"/>
+                            <FieldDefinition aspect.friendlyName="Thingworx Field Name" baseType="STRING" description="Thingworx field name" name="fieldName" ordinal="1"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows/>
+                </ConfigurationTable>
+                <ConfigurationTable description="JDBC Settings" isMultiRow="false" name="ConnectionInfo" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="SELECT NOW()" baseType="STRING" description="Connection test string/query" name="connectionValidationString" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="jdbc:mydb:/server:port/database?param=value" aspect.friendlyName="JDBC Connection String" baseType="STRING" description="JDBC Connection URL" name="jDBCConnectionURL" ordinal="1"/>
+                            <FieldDefinition aspect.defaultValue="com.yourdatabase.yourDriver" aspect.friendlyName="JDBC Driver Class Name" baseType="STRING" description="JDBC Driver Class Name" name="jDBCDriverClass" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="5.0" aspect.friendlyName="Maxium Number of Connections" baseType="NUMBER" description="Maximum number of connections in the pool" name="maxConnections" ordinal="3"/>
+                            <FieldDefinition aspect.friendlyName="Database Password" baseType="PASSWORD" description="Database password" name="password" ordinal="5"/>
+                            <FieldDefinition aspect.friendlyName="Database User Name" baseType="STRING" description="Database user name" name="userName" ordinal="4"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <connectionValidationString/>
+                            <password><![CDATA[WBxEdwIPdTo0MWUAxRwlRQ==]]></password>
+                            <jDBCConnectionURL><![CDATA[jdbc:mysql://127.0.0.1:3306/sampletable]]></jDBCConnectionURL>
+                            <userName><![CDATA[root]]></userName>
+                            <jDBCDriverClass><![CDATA[com.mysql.jdbc.Driver]]></jDBCDriverClass>
+                            <maxConnections>5.0</maxConnections>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable description="Connection Monitoring Settings" isMultiRow="false" name="ConnectionMonitoring" ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition aspect.defaultValue="30000.0" aspect.friendlyName="Monitor Rate (seconds)" baseType="NUMBER" description="Monitor rate in milliseconds" name="connectionMonitorRate" ordinal="1"/>
+                            <FieldDefinition aspect.defaultValue="false" aspect.friendlyName="Enable Monitoring" baseType="BOOLEAN" description="Enable connection monitoring" name="enableMonitor" ordinal="0"/>
+                            <FieldDefinition aspect.defaultValue="1.0" aspect.friendlyName="Number of Retries" baseType="NUMBER" description="Number of retries" name="numberOfRetries" ordinal="2"/>
+                            <FieldDefinition aspect.defaultValue="2000.0" aspect.friendlyName="Retry Delay (milliseconds)" baseType="NUMBER" description="Retry delay in milliseconds" name="retryDelay" ordinal="3"/>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <retryDelay>2000.0</retryDelay>
+                            <connectionMonitorRate>3000.0</connectionMonitorRate>
+                            <numberOfRetries>1.0</numberOfRetries>
+                            <enableMonitor>false</enableMonitor>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ThingShape>
+                <PropertyDefinitions>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="Actual" ordinal="6"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="Max" ordinal="5"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeThreshold="0.0" aspect.dataChangeType="VALUE" aspect.defaultValue="0" aspect.isLogged="true" aspect.isPersistent="true" aspect.isReadOnly="false" baseType="INTEGER" category="" description="" isLocalOnly="false" name="Min" ordinal="4"/>
+                    <PropertyDefinition aspect.cacheTime="0.0" aspect.dataChangeType="VALUE" aspect.isLogged="true" aspect.isPersistent="false" aspect.isReadOnly="false" baseType="DATETIME" category="" description="" isLocalOnly="false" name="timestamp" ordinal="3"/>
+                </PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="allot">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="createnthings">
+                        <ResultType baseType="NOTHING" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="creating">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="DeleteARecord">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="StringField" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="Retrieve all records" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetAllRecords">
+                        <ResultType aspect.dataShape="dbds" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="InsertRecord">
+                        <ResultType aspect.dataShape="dbds" baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="INTEGER" description="" name="Actual" ordinal="4"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="Max" ordinal="2"/>
+                            <FieldDefinition baseType="INTEGER" description="" name="Min" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="UpdateARecord">
+                        <ResultType baseType="NUMBER" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions>
+                            <FieldDefinition baseType="STRING" description="" name="Link" ordinal="2"/>
+                            <FieldDefinition baseType="STRING" description="" name="StringField" ordinal="1"/>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions/>
+                <ServiceMappings/>
+                <ServiceImplementations>
+                    <ServiceImplementation description="" handlerName="Script" name="allot">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[
+
+var result1 = me.GetAllRecords();
+
+logger.info("Mini basha"+result1.Min);
+logger.info("Max basha"+result1.Max);
+logger.info("Actual basha"+result1.Actal);
+
+me.Min=result1.Min
+me.Max=result1.Max
+me.Actual=result1.Actual
+
+
+]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="createnthings">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[try {  
+    var params = {  
+        name: "NewThingName",  
+        description: "This Is A New Thing",  
+        thingTemplateName: "GenericThing"  
+    };  
+    Resources["EntityServices"].CreateThing(params);  
+   // Always enable and restart a new thing to make it active on the Platform  
+    Things["NewThingName"].Enable();  
+    Things["NewThingName"].Restart();  
+  
+  
+    // Any code that could potentially cause an exception should  
+    // also be included in the try-catch block.  
+}  
+catch (err) {  
+    // If an exception is caught, we need to attempt to delete everything  
+    // that was created to roll back the entire transaction.  
+    // If we do not do this a "ghost" entity will remain in memory  
+    // We must do this in reverse order of creation so there are no dependency conflicts  
+    // We also do not know where it failed so we must attempt to remove all of them,  
+    // but also handle exceptions in case they were not created  
+  
+     
+  
+    try {  
+        var params = {name: "NewThingName"};  
+        Resources["EntityServices"].DeleteThing(params);  
+    }  
+    catch(ex2) {//Thing was not created  
+    }  
+}  ]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="SQLCommand" name="creating">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="SQLCommand" isMultiRow="false" name="Query" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/>
+                                        <FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/>
+                                        <FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <maxItems>500.0</maxItems>
+                                        <timeout>60.0</timeout>
+                                        <sql><![CDATA[CREATE TABLE demo1 (temp integer(20),humi integer(15));]]></sql>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="SQLCommand" name="DeleteARecord">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="SQLCommand" isMultiRow="false" name="Query" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/>
+                                        <FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/>
+                                        <FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <maxItems>500.0</maxItems>
+                                        <timeout>60.0</timeout>
+                                        <sql><![CDATA[DELETE FROM demo
+    WHERE
+    (title = [[StringField]]);]]></sql>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="SQLQuery" name="GetAllRecords">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="SQLQuery" isMultiRow="false" name="Query" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/>
+                                        <FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/>
+                                        <FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <maxItems>500.0</maxItems>
+                                        <timeout>60.0</timeout>
+                                        <sql><![CDATA[select * from demo3 order by timee desc;
+ ]]></sql>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="SQLCommand" name="InsertRecord">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="SQLCommand" isMultiRow="false" name="Query" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/>
+                                        <FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/>
+                                        <FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <maxItems>500.0</maxItems>
+                                        <timeout>60.0</timeout>
+                                        <sql><![CDATA[INSERT INTO demo3
+    (Min,Actual,Max,timee) 
+    VALUES
+    ([[Min]],[[Actual]] ,[[Max]],[[timee]] );
+
+
+]]></sql>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="SQLCommand" name="UpdateARecord">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="SQLCommand" isMultiRow="false" name="Query" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="NUMBER" description="maxItems" name="maxItems" ordinal="0"/>
+                                        <FieldDefinition baseType="STRING" description="sql" name="sql" ordinal="0"/>
+                                        <FieldDefinition baseType="NUMBER" description="timeout" name="timeout" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <maxItems>500.0</maxItems>
+                                        <timeout>60.0</timeout>
+                                        <sql><![CDATA[UPDATE demo
+    SET Link = [[Link]]
+    WHERE (title = [[StringField]]);]]></sql>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
+                </ServiceImplementations>
+                <Subscriptions/>
+            </ThingShape>
+            <PropertyBindings/>
+            <RemotePropertyBindings/>
+            <RemoteServiceBindings/>
+            <RemoteEventBindings/>
+            <AlertConfigurations>
+                <AlertDefinitions name="Actual"/>
+                <AlertDefinitions name="Max"/>
+                <AlertDefinitions name="Min"/>
+                <AlertDefinitions name="timestamp"/>
+            </AlertConfigurations>
+            <ImplementedShapes/>
+            <ThingProperties>
+                <Min>
+                    <Value>0</Value>
+                    <Timestamp>2018-03-13T19:44:44.022+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </Min>
+                <Max>
+                    <Value>0</Value>
+                    <Timestamp>2018-03-13T19:44:44.022+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </Max>
+                <Actual>
+                    <Value>0</Value>
+                    <Timestamp>2018-03-13T19:44:44.022+05:30</Timestamp>
+                    <Quality>GOOD</Quality>
+                </Actual>
+            </ThingProperties>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated&#10;" timestamp="2017-10-25T15:07:39.403+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : createnthings : Code Updated, Service Added&#10;" timestamp="2017-10-27T10:36:46.264+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T11:08:56.756+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : title : Added, link : Added&#10;services : GetAllRecords : Output Updated, InsertRecord : Output Updated,  : ServiceType updated, Output Updated, Code Updated, creating : Service Added&#10;" timestamp="2017-12-28T11:46:14.764+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : creating : Output Updated, Code Updated&#10;" timestamp="2017-12-28T11:47:48.646+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : creating : Output Updated, InsertRecord : Output Updated, Code Updated, GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2017-12-28T11:54:03.323+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated&#10;" timestamp="2017-12-28T11:56:33.714+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-28T13:03:05.771+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : title : Updated, link : Updated&#10;" timestamp="2017-12-28T13:03:22.853+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : title : removed, link : removed&#10;services : InsertRecord : Output Updated&#10;" timestamp="2017-12-29T15:18:03.865+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated&#10;" timestamp="2018-01-18T13:02:37.696+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temp : Added, humi : Added&#10;services : GetAllRecords : Output Updated, Code Updated, ServiceType updated&#10;" timestamp="2018-01-18T13:20:02.913+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated, Service Added&#10;" timestamp="2018-01-18T13:29:31.162+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:33:17.602+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:34:05.890+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:35:19.426+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:36:41.211+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-18T13:37:52.364+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Input parameter temp Updated, Inputs updated, Input parameter humi Updated&#10;" timestamp="2018-01-18T13:38:39.481+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Input parameter temp Updated, Inputs updated, Code Updated, GetAllRecords : Output Updated&#10;" timestamp="2018-01-18T13:41:45.705+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:45:07.538+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-18T13:57:32.442+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-18T13:57:56.335+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Added&#10;" timestamp="2018-01-18T13:58:21.552+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-18T16:09:26.245+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-18T16:10:48.932+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-18T17:21:53.967+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-18T17:23:45.268+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated, GetAllRecords : Output Updated&#10;" timestamp="2018-01-19T11:13:27.397+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated, InsertRecord : Output Updated&#10;" timestamp="2018-01-19T11:16:02.994+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated&#10;" timestamp="2018-01-19T11:18:00.428+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated&#10;" timestamp="2018-01-19T11:19:06.191+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:20:19.887+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated&#10;" timestamp="2018-01-19T11:20:33.525+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-19T11:20:34.853+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:22:07.522+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:24:04.647+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:24:34.477+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:32:45.164+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Input parameter timee Added, Inputs updated, Code Updated&#10;" timestamp="2018-01-19T11:33:43.329+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:34:19.102+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, allot : Code Updated, GetAllRecords : Output Updated, Code Updated&#10;" timestamp="2018-01-19T11:45:33.909+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temp : Updated, humi : Updated, timestamp : Updated&#10;" timestamp="2018-01-19T11:47:20.361+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : timestamp : Updated&#10;" timestamp="2018-01-19T11:50:51.436+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : temp : Updated, humi : Updated&#10;" timestamp="2018-01-19T12:20:49.680+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-19T12:21:51.403+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated, Input parameter Min Updated, Inputs updated, Input parameter Actual Added, Input parameter Max Updated&#10;" timestamp="2018-01-19T12:25:58.414+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : GetAllRecords : Output Updated&#10;" timestamp="2018-01-19T12:27:17.226+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Code Updated&#10;" timestamp="2018-01-19T12:29:10.679+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Min : Added, Max : Added, Actual : Added, temp : removed, humi : removed&#10;" timestamp="2018-01-19T12:32:31.368+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-19T12:33:28.666+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="properties : Min : Updated, Max : Updated, Actual : Updated&#10;" timestamp="2018-01-19T12:36:46.427+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : allot : Code Updated&#10;" timestamp="2018-01-19T12:39:31.283+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Input parameter Min Updated, Inputs updated, Input parameter Max Updated&#10;" timestamp="2018-01-19T12:46:53.195+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated&#10;" timestamp="2018-01-19T12:50:02.839+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-19T12:50:04.852+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2018-01-19T12:50:59.753+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services : InsertRecord : Output Updated, Input parameter timee Updated, Inputs updated&#10;" timestamp="2018-01-19T12:51:34.882+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Thing>
+    </Things>
+</Entities>
