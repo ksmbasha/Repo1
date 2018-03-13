@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Entities>
+    <Projects>
+        <Project dependsOn="" description="" documentationContent="" homeMashup="" lastModifiedDate="2018-02-16T14:34:05.816+05:30" name="firstproject" packageVersion="1.0.0" projectName="firstproject" tags="Applications:ThingWorx Training">
+            <Owner name="Administrator" type="User"/>
+            <avatar/>
+            <DesignTimePermissions>
+                <Create/>
+                <Read/>
+                <Update/>
+                <Delete/>
+                <Metadata/>
+            </DesignTimePermissions>
+            <RunTimePermissions/>
+            <VisibilityPermissions>
+                <Visibility/>
+            </VisibilityPermissions>
+            <ConfigurationTables/>
+            <ConfigurationChanges>
+                <ConfigurationChange changeAction="CREATE" changeReason="header : name : updated, tags : updated&#10;" timestamp="2018-02-16T14:34:05.800+05:30" user="Administrator"/>
+            </ConfigurationChanges>
+        </Project>
+    </Projects>
+</Entities>
