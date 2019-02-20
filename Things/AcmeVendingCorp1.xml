@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Entities>
     <Things>
-        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2017-12-29T15:18:34.988+05:30" name="AcmeVendingCorp1" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="GenericThing" valueStream="Process Value Stream">
+        <Thing description="" documentationContent="" effectiveThingPackage="ConfiguredThing" enabled="true" homeMashup="" identifier="" lastModifiedDate="2019-02-20T11:52:06.341+05:30" name="AcmeVendingCorp1" projectName="" published="false" tags="Applications:ThingWorx Training" thingTemplate="GenericThing" valueStream="Process Value Stream">
             <Owner name="Administrator" type="User"/>
             <avatar/>
             <DesignTimePermissions>
@@ -40,6 +40,10 @@
                     </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="GetThingWorxFeed" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="GetThingWorxFeed1CopyCopy">
                         <ResultType aspect.dataShape="ELecDS" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
+                        <ParameterDefinitions/>
+                    </ServiceDefinition>
+                    <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="infotab">
+                        <ResultType aspect.dataShape="ThingWorxFeedData" baseType="INFOTABLE" description="" name="result" ordinal="0"/>
                         <ParameterDefinitions/>
                     </ServiceDefinition>
                     <ServiceDefinition aspect.isAsync="false" category="" description="" isAllowOverride="false" isLocalOnly="false" isOpen="false" isPrivate="false" name="Testinfo">
@@ -276,6 +280,57 @@ result = InfoTable;]]></code>
                             </ConfigurationTable>
                         </ConfigurationTables>
                     </ServiceImplementation>
+                    <ServiceImplementation description="" handlerName="Script" name="infotab">
+                        <ConfigurationTables>
+                            <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
+                                <DataShape>
+                                    <FieldDefinitions>
+                                        <FieldDefinition baseType="STRING" description="code" name="code" ordinal="0"/>
+                                    </FieldDefinitions>
+                                </DataShape>
+                                <Rows>
+                                    <Row>
+                                        <code><![CDATA[var params = {
+    headers: undefined /* JSON */,
+    useProxy: undefined /* BOOLEAN */,
+    proxyHost: undefined /* STRING */,
+    useNTLM: undefined /* BOOLEAN */,
+    ignoreSSLErrors: undefined /* BOOLEAN */,
+    proxyPort: undefined /* INTEGER */,
+    withCookies: undefined /* BOOLEAN */,
+    password: undefined /* STRING */,
+    url: "https://www.yahoo.com/news/rss/",
+    workstation: undefined /* STRING */,
+    username: undefined /* STRING */,
+    proxyScheme: undefined /* STRING */,
+    domain: undefined /* STRING */,
+    timeout: undefined /* NUMBER */,
+};
+ 
+// result: XML 
+var xmlPage = Resources["ContentLoaderFunctions"].GetXML(params);
+ 
+var params = {
+    infoTableName : "InfoTable",
+    dataShapeName : "ThingWorxFeedData" 
+};  
+ 
+// CreateInfoTableFromDataShape 
+var result =
+    Resources["InfoTableFunctions"].
+    CreateInfoTableFromDataShape(params);
+    
+for each (var item in xmlPage.channel.item) {
+    var row = new Object();
+    row.title = item.title;
+    row.link = item.link;
+    result.AddRow(row); 
+}]]></code>
+                                    </Row>
+                                </Rows>
+                            </ConfigurationTable>
+                        </ConfigurationTables>
+                    </ServiceImplementation>
                     <ServiceImplementation description="" handlerName="Script" name="Testinfo">
                         <ConfigurationTables>
                             <ConfigurationTable description="Script" isMultiRow="false" name="Script" ordinal="0">
@@ -445,6 +500,7 @@ result.AddRow(row);
                 <ConfigurationChange changeAction="MODIFY" changeReason="services : Testinfo : Output Updated, Code Updated, Service Added&#10;" timestamp="2017-12-20T20:28:47.850+05:30" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="services : GetThingWorxFeed1Copy : Code Updated&#10;" timestamp="2017-12-28T13:43:07.881+05:30" user="Administrator"/>
                 <ConfigurationChange changeAction="MODIFY" changeReason="" timestamp="2017-12-29T15:18:34.938+05:30" user="Administrator"/>
+                <ConfigurationChange changeAction="MODIFY" changeReason="services :  : Code Updated, info1 : Output Updated, infotab : Service Added&#10;" timestamp="2019-02-20T11:52:05.708+05:30" user="Administrator"/>
             </ConfigurationChanges>
         </Thing>
     </Things>
